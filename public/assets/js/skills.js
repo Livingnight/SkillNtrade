@@ -22,6 +22,9 @@
                  email: $('#skillEmail').val().trim(),
                  skills: $('#skill').val().trim(),
                  category: $('#skillCategory').val().trim(),
+                 title: $('#skillTitle').val().trim(),
+                 compensation: $('#skillCompensation').val().trim(),
+                 location: $('#skillLocation').val().trim(),
                  description: $('#skillDescription').val().trim()
              };
 
@@ -44,7 +47,7 @@
              $btns.removeClass ('active');
              var matcher = new RegExp($(this).val(), 'gi');
              $('.skill').show().not(function () {
-                 return matcher.test($(this).find('.name, .email, .skill, .category, .description').text())
+                 return matcher.test($(this).find('.name, .email, .skill, .category, .location, .compensation, .title, .description').text())
              }).hide();
          });
 
@@ -54,6 +57,10 @@
              const title = $('#modalTitle');
              const category = $('#modalCategory');
              const skill = $('#modalSkill');
+
+             const location = $('#modalLocation');
+
+
              const email = $('#modalEmail');
              const compensation = $('#modalCompensation');
 
@@ -62,6 +69,10 @@
              category.html(`Category: ${$(this).attr('data-category')}`);
              skill.html(`Skill: ${$(this).attr('data-skill')}`);
              compensation.html(`Compensation: ${$(this).attr('data-compensation')}`);
+
+             location.html(`Location: ${$(this).attr('data-location')}`);
+
+
              email.html(`Email: ${$(this).attr('data-email')}`);
 
 
