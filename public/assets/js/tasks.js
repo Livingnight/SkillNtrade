@@ -55,7 +55,7 @@ $(document).ready(function () {
         const email = $('#modalEmail');
         const compensation = $('#modalCompensation');
 
-        name.html(`${$(this).attr('data-name')}`);
+        name.html(`Name: ${$(this).attr('data-name')}`);
         title.html(`Title: ${$(this).attr('data-title')}`);
         category.html(`Category: ${$(this).attr('data-category')}`);
         task.html(`Task: ${$(this).attr('data-task')}`);

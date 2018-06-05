@@ -89,6 +89,7 @@ body {
 
 /* "Select all Categories" Button */
 #all {
+    font-family: 'Archivo Black', sans-serif;
     margin-left: 10px;
     background-color: #1F82F6;
 }
@@ -123,3 +124,39 @@ p {
     display: inline;
 }
 /* ----------------------------------- */
+
+#addSkill{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#addTask{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+#myModal {
+    border-radius: 20px;
+}
+
+.modal-header{
+    background-color: #1F82F6;
+}
+
+#modalTitle {
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    margin: 0px;
+}
+
+.modal-body{
+    font-family: 'Archivo Black', sans-serif;
+    color: #1F82F6;
+}
+
+#modalTask {
+    font-family: 'Archivo Black', sans-serif;
+    color: #131C57
+}
+#modalSkill {
+    font-family: 'Archivo Black', sans-serif;
+    color: #131C57
+}

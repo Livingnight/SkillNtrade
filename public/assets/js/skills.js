@@ -14,7 +14,6 @@
 
          $('#skillForm').on('submit', function (event) {
              event.preventDefault();
-             console.log('why');
 
              let data = {
                  name: $('#skillName').val().trim(),
@@ -56,23 +55,17 @@
              const title = $('#modalTitle');
              const category = $('#modalCategory');
              const skill = $('#modalSkill');
-
              const location = $('#modalLocation');
-
-
              const email = $('#modalEmail');
              const compensation = $('#modalCompensation');
 
-             name.html(`${$(this).attr('data-name')}`);
+             name.html(`Name: ${$(this).attr('data-name')}`);
              title.html(`Title: ${$(this).attr('data-title')}`);
              category.html(`Category: ${$(this).attr('data-category')}`);
-             skill.html(`Skill: ${$(this).attr('data-skill')}`);
              compensation.html(`Compensation: ${$(this).attr('data-compensation')}`);
-
              location.html(`Location: ${$(this).attr('data-location')}`);
-
-
              email.html(`Email: ${$(this).attr('data-email')}`);
+             skill.html(`Skill: ${$(this).attr('data-skill')}`);
 
 
              $('#myModal').modal('show');
