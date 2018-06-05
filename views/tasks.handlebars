@@ -1,14 +1,39 @@
 <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
 <div class="container col-sm-10">
 
-          <a href="/">
-                    <img id="cornerLogo" src="./assets/images/corner_logo.png" alt="skillTrade" style="width: 20%;"/>
-                </a>
-                <a href="/skills">
-                    <button id="nav">SKILLS</button>
-                </a>
-  
+    <a href="/">
+        <img id="cornerLogo" src="./assets/images/corner_logo.png" alt="skillTrade" style="width: 20%;" />
+    </a>
+    <a href="/skills">
+        <button id="nav">SKILLS</button>
+    </a>
+
     <br>
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h1 id="modalTitle"></h1>
+                </div>
+                <!-- Body -->
+                <div class="modal-body">
+                    <h4 id="modalTask"></h4>
+                    <h4 id="modalName"></h4>
+                    <h4 id="modalCategory"></h4>
+                    <h4 id="modalDeadline"></h4>
+                    <h4 id="modalEmail"></h4>
+                    <h4 id="modalCompensation"></h4>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer modal-footer--mine">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-sm-8 float-left">
@@ -16,24 +41,34 @@
 
                 <h2 class="card-header text-center">Tasks</h2>
                 <input type="text" class="search-box" id="search" placeholder="Search">
-                <img id="categories-bar" src="./assets/images/categories_bar.png"style="width: 100%"/>
+                <img id="categories-bar" src="./assets/images/categories_bar.png" style="width: 100%" />
                 <div class="btn-group" role="group">
                     <button type="button" id="all" class="btn btn-success filterButton">All</button>
                     <div class="GraphicDesignButton">
-                        <button type="button"id="GraphicDesign" class="btn filterButton"><img src="./assets/images/blue icons_5.png" style ="width: 80%; height:80%;"/></button> 
-                        <button type="button"id="GraphicDesign-bottom" class="btn filterButton"><img src="./assets/images/pink icons_5.png" style ="width: 80%; height:80%;"/></button> 
+                        <button type="button" id="GraphicDesign" class="btn filterButton">
+                            <img src="./assets/images/blue icons_5.png" style="width: 80%; height:80%;" />
+                        </button>
+                        <button type="button" id="GraphicDesign-bottom" class="btn filterButton">
+                            <img src="./assets/images/pink icons_5.png" style="width: 80%; height:80%;" />
+                        </button>
                     </div>
-                    <button type="button"id="UI" class="btn filterButton"><img src="./assets/images/blue icons_4.png" style ="width: 80%; height:80%;"/></button>
-                    <button type="button"id="UX" class="btn filterButton"><img src="./assets/images/blue icons_3.png" style ="width: 80%; height:80%;"/></button> 
-                    <button type="button"id="FrontEnd" class="btn filterButton"><img src="./assets/images/blue icons_2.png" style ="width: 80%; height:80%;"/></button> 
-                    <button type="button"id="BackEnd" class="btn filterButton"><img src="./assets/images/blue icons_1.png" style ="width: 80%; height:80%;"/></button> 
-                
+                    <button type="button" id="UI" class="btn filterButton">
+                        <img src="./assets/images/blue icons_4.png" style="width: 80%; height:80%;" />
+                    </button>
+                    <button type="button" id="UX" class="btn filterButton">
+                        <img src="./assets/images/blue icons_3.png" style="width: 80%; height:80%;" />
+                    </button>
+                    <button type="button" id="FrontEnd" class="btn filterButton">
+                        <img src="./assets/images/blue icons_2.png" style="width: 80%; height:80%;" />
+                    </button>
+                    <button type="button" id="BackEnd" class="btn filterButton">
+                        <img src="./assets/images/blue icons_1.png" style="width: 80%; height:80%;" />
+                    </button>
+
                 </div>
                 <div class="card-body" id="parent">
 
-                    {{#each tasks}}
-                        {{>tasks/task-block}}
-                    {{/each}}
+                    {{#each tasks}} {{>tasks/task-block}} {{/each}}
                 </div>
             </div>
 
@@ -47,8 +82,7 @@
                 <div class="card-body">
                     <form id="taskForm">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="taskEmail" aria-describedby="emailHelp"
-                                   placeholder="email@email.com" required>
+                            <input type="email" class="form-control" id="taskEmail" aria-describedby="emailHelp" placeholder="email@email.com" required>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" id="taskName" placeholder="Name" required>
@@ -68,15 +102,13 @@
                             <input type="text" class="form-control" id="taskDeadline" placeholder="Deadline" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="taskCompensation"
-                                   placeholder="Compensation"
-                                   required>
+                            <input type="text" class="form-control" id="taskCompensation" placeholder="Compensation/Trade" required>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Title" id="taskTitle">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="tasks" rows="3" placeholder="Description"required></textarea>
+                            <textarea class="form-control" id="tasks" rows="3" placeholder="Description" required></textarea>
                         </div>
                         <button id="addTask" type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -91,5 +123,3 @@
 
 </div>
 </div>
-
-
