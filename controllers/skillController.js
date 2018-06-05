@@ -4,8 +4,6 @@ const express = require('express');
 
 const router = express.Router();
 
-const mailgun =
-
 
 //get route for main page
     router.get('/', (req, res) => {
@@ -14,7 +12,7 @@ const mailgun =
 
 //get route for skills api
 router.get('/api/skills', (req, res) => {
-    db.Skills.findAll({})
+    db.Skill.findAll({})
         .then(dbWant => {
 
             res.json(dbWant);
@@ -59,7 +57,7 @@ router.get('/tasks', (req, res) => {
 });
 //get route for skills page
 router.get('/skills', (req, res) => {
-    db.Skills.findAll({}).then(dbSkill => {
+    db.Skill.findAll({}).then(dbSkill => {
         const hdbsObject = {
             skills: dbSkill
         };
@@ -77,7 +75,7 @@ router.get('/skills', (req, res) => {
 //post route for skills api
 router.post('/api/skills', (req, res) => {
     console.log(req.body);
-    db.Skills.create({
+    db.Skill.create({
         name: req.body.name,
         email: req.body.email,
         skills: req.body.skills,

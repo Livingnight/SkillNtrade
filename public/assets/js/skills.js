@@ -3,8 +3,7 @@
 
 
          function skillSubmit(data) {
-             // console.log("naaathing");
-             // console.log(data);
+
              $.post("/api/skills", data).then( (res) => {
                  console.log(res);
                  window.location.href = '/skills'
