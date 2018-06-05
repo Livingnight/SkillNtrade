@@ -146,7 +146,7 @@ router.post('/api/tasks', (req, res) => {
             console.error(err);
         });
     });
-})
+});
 module.exports = router;
 
 
